@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px 3%;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Baris pertama */
+        .baris-atas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Baris kedua */
+        .baris-bawah {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        /* Desain semua kotak */
+        .box {
+            height: clamp(55px, 7vh, 85px);
+            background-color: #e2e2e2;
+            border: 5px solid #111;
+            border-radius: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Baris pertama: 3 kotak -->
+    <div class="baris-atas">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <!-- Baris kedua: 5 kotak -->
+    <div class="baris-bawah">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        /* Layout utama */
+        .container {
+            width: 100%;
+            height: calc(100vh - 50px);
+
+            display: grid;
+
+            grid-template-columns: 22% 1fr 22%;
+            grid-template-rows: 20% 60% 20%;
+        }
+
+        /* Navigasi kiri */
+        .nav {
+            background-color: pink;
+            grid-column: 1;
+            grid-row: 1 / 4;
+            padding: 20px;
+        }
+
+        /* Header atas */
+        .header {
+            background-color: #f1e68b;
+            grid-column: 2 / 4;
+            grid-row: 1;
+            padding: 20px;
+        }
+
+        /* Article tengah */
+        .article {
+            background-color: white;
+            grid-column: 2;
+            grid-row: 2;
+            padding: 20px;
+        }
+
+        /* Aside kanan */
+        .aside {
+            background-color: #00dddd;
+            grid-column: 3;
+            grid-row: 2;
+            padding: 20px;
+        }
+
+        /* Footer bawah */
+        .footer {
+            background-color: #f1e68b;
+            grid-column: 2 / 4;
+            grid-row: 3;
+            padding: 20px;
+        }
+
+        /* Ukuran tulisan */
+        .container div {
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="nav">
+            Nav
+        </div>
+
+        <div class="header">
+            Header
+        </div>
+
+        <div class="article">
+            Article
+        </div>
+
+        <div class="aside">
+            Aside
+        </div>
+
+        <div class="footer">
+            Footer
+        </div>
+
+    </div>
+
+</body>
+</html>

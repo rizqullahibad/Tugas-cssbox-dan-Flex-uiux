@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Layout 3</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 5px;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout utama */
+        .container {
+            width: 100%;
+            height: calc(100vh - 10px);
+
+            display: grid;
+
+            grid-template-columns: 20% 1fr 20%;
+            grid-template-rows: 11.5vh 1fr 10vh;
+
+            gap: 10px 12px;
+        }
+
+        /* Kotak kuning */
+        .yellow {
+            background-color: #f5eb45;
+            border: 2px solid #333;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        /* Kotak oranye */
+        .orange {
+            background-color: #ff6426;
+            border: 2px solid #333;
+            grid-column: 2 / 4;
+            grid-row: 1;
+        }
+
+        /* Kotak hijau */
+        .green {
+            background-color: #addd98;
+            border: 2px solid #333;
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        /* Kotak abu-abu */
+        .gray {
+            background-color: #d1d6db;
+            border: 2px solid #333;
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        /* Kotak biru muda */
+        .cyan {
+            background-color: #43c9e8;
+            border: 2px solid #333;
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        /* Kotak biru bawah */
+        .blue {
+            background-color: #1764eb;
+            border: 2px solid #333;
+            grid-column: 1 / 4;
+            grid-row: 3;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="yellow"></div>
+
+        <div class="orange"></div>
+
+        <div class="green"></div>
+
+        <div class="gray"></div>
+
+        <div class="cyan"></div>
+
+        <div class="blue"></div>
+
+    </div>
+
+</body>
+</html>
